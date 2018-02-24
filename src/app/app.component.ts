@@ -6,11 +6,14 @@ import { ProductService } from './product.service';
   template: `<h1>{{title}}</h1>
   <img alt='missing image' src="{{imageUrl}}" />
   <app-products></app-products>
-  <button class="btn btn-primary">Submit</button>`,
+  <button class="btn btn-primary" (click)="onClickMe($event)">Submit</button>`,
   providers: [ProductService]
 })
 
 export class AppComponent {
   title = 'Angular 5 Sandbox';
-  imageURL = 'https://www.w3schools.com/html/pic_mountain.jpg';
+  imageUrl = 'https://www.w3schools.com/html/pic_mountain.jpg';
+  onClickMe($event){
+    console.log("Clicked", $event);
+  }
 }
