@@ -5,14 +5,13 @@ import { ProductService } from './product.service';
 @Component({
     selector: 'app-products',
     template: `<h2>Products</h2>
-    <ul>
-        <li *ngFor="let product of products">
-            {{product}}
-        </li>
-    </ul>`
+    <div *ngFor="let product of products">
+        <product [data]="product"></product>
+    </div>`,
+    providers: [ProductService]
 })
 export class ProductsComponent{
-    products: string[];
+    products;
     constructor(productService: ProductService) {
         this.products = productService.getProducts();
     }

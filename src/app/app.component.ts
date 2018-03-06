@@ -3,7 +3,9 @@ import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>{{title}}</h1>
+  template: `
+  <rating></rating>
+  <h1>{{title}}</h1>
   <img alt='missing image' src="{{imageUrl}}" />
   <app-products></app-products>
   <button class="btn btn-primary" (click)="onClickMe($event)">Submit</button>`,
