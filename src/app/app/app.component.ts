@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { ProductService } from './product.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-root',
   template: `
-  <rating></rating>
   <h1>{{title}}</h1>
   <img alt='missing image' src="{{imageUrl}}" />
   <app-products></app-products>

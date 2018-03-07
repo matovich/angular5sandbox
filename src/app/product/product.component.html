@@ -9,10 +9,10 @@
             {{ data.productName }}  
         </h4>                
         {{ data.releasedDate }} 
-        <rating 
+        <app-rating 
             [rating-value]="data.rating" 
             [numOfReviews]="data.numOfReviews">
-        </rating>
+        </app-rating>
         <br>                                            
         {{ data.description }}
     </div>
