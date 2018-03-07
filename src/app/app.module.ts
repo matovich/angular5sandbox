@@ -8,8 +8,7 @@ import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    ProductsComponent, RatingComponent, ProductComponent
+    AppComponent, ProductsComponent, RatingComponent, ProductComponent
   ],
   imports: [
     BrowserModule
