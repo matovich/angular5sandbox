@@ -1,19 +1,24 @@
 <div class="media">
     <div class="media-left">
         <a href="#">
-        <img class="media-object img-circle" src="{{ data.imageUrl }}">
+            <img class="media-object img-circle" src="{{ data.imageUrl }}">
         </a>
     </div>
     <div class="media-body">
         <h4 class="media-heading">
-            {{ data.productName }}  
-        </h4>                
-        {{ data.releasedDate }} 
-        <app-rating 
-            [rating-value]="data.rating" 
-            [numOfReviews]="data.numOfReviews">
+            {{ data.productName }}
+        </h4>
+        {{ data.releasedDate | date | uppercase }}
+        <app-rating [rating-value]="data.rating" [numOfReviews]="data.numOfReviews">
         </app-rating>
-        <br>                                            
-        {{ data.description }}
+        <div [ngSwitch]="data.rating">
+            <div *ngSwitchCase="1">Poor</div>
+            <div *ngSwitchCase="2">Fair</div>
+            <div *ngSwitchCase="3">Good</div>
+            <div *ngSwitchCase="4">Very Good</div>
+            <div *ngSwitchCase="5">Excellent</div>
+            <div *ngSwitchDefault>Not Rated</div> ​ 
+        </div>
+        <br> {{ data.description | truncate: 50 }}
     </div>
 </div>
