@@ -12,6 +12,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { BsJumbotronComponent } from './bs-jumbotron/bs-jumbotron.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule, FormsModule, HttpModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
