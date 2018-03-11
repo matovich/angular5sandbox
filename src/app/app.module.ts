@@ -13,10 +13,12 @@ import { BsJumbotronComponent } from './bs-jumbotron/bs-jumbotron.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
+import { ObservableSampleComponent } from './observable-sample/observable-sample.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ProductsComponent, RatingComponent, ProductComponent, TruncatePipe, BsJumbotronComponent, UserFormComponent, LoginComponent
+    AppComponent, ProductsComponent, RatingComponent, ProductComponent, TruncatePipe, BsJumbotronComponent,
+    UserFormComponent, LoginComponent, ObservableSampleComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, ReactiveFormsModule
