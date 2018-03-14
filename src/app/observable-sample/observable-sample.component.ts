@@ -18,7 +18,7 @@ export class ObservableSampleComponent {
   constructor() {
     this.searchControl.valueChanges
     .filter(text => text.length >= 3)
-    .debounceTime(400)
+    .debounceTime(400)  //wait in between request
     .distinctUntilChanged()
     .subscribe(value => {console.log(value);});
    }

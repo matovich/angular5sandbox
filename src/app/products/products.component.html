@@ -1,11 +1,13 @@
-<h2>Products</h2>
+<div class="my-border">
+    <h2>Products</h2>
 
-<div *ngIf="products.length === 0">
-    <p> No products to display. </p>
-</div>
+    <div *ngIf="products.length === 0">
+        <p> No products to display. </p>
+    </div>
 
-<div *ngIf="products.length > 0">
-    <div *ngFor="let product of products">
-        <app-product [data]="product"></app-product>
+    <div *ngIf="products.length > 0">
+        <div *ngFor="let product of products">
+            <app-product [data]="product"></app-product>
+        </div>
     </div>
 </div>

@@ -14,11 +14,13 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { ObservableSampleComponent } from './observable-sample/observable-sample.component';
+import { GitHubService } from './git-hub.service';
+import { GitHubComponent } from './git-hub/git-hub.component';
 
 @NgModule({
   declarations: [
     AppComponent, ProductsComponent, RatingComponent, ProductComponent, TruncatePipe, BsJumbotronComponent,
-    UserFormComponent, LoginComponent, ObservableSampleComponent
+    UserFormComponent, LoginComponent, ObservableSampleComponent, GitHubComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, ReactiveFormsModule
