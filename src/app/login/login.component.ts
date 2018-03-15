@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PasswordValidator } from'../password-validator';
 import { LoginService } from '../login.service';
@@ -8,7 +8,7 @@ import { LoginService } from '../login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   form: FormGroup;
 
   constructor(fb: FormBuilder, private _loginService: LoginService) {
@@ -17,6 +17,8 @@ export class LoginComponent {
       password: ['', Validators.compose([Validators.required, PasswordValidator.cannotContainSpace])]
     });
   }
+
+  ngOnInit() {}
 
   login() {
     console.log(this.form.value); // prints from values in json format

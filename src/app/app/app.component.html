@@ -1,24 +1,26 @@
-<app-git-hub></app-git-hub>
-
-<h1>{{title}}</h1>
-
-<app-observable-sample></app-observable-sample>
-
-<app-login></app-login>
-
-<app-user-form></app-user-form>
-
-
-<img class="img-rounded" alt='missing image' src="{{imageUrl}}" />
-<app-products></app-products>
-<button class="btn btn-primary" (click)="onClickMe($event)">Submit</button>
-
-<app-bs-jumbotron>
-    <div class="heading">Jumbotron Heading</div>
-    <div class="body">
-        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or
-        information.
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="">Angular 5 Sandbox</a>
     </div>
-    <div class="button">Learn More</div>
-</app-bs-jumbotron>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a routerLink="" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="GitHub" routerLinkActive="active">GitHub</a></li>
+            <li><a routerLink="Login" routerLinkActive="active">Login</a></li>
+            <li><a routerLink="Observable" routerLinkActive="active">Observable</a></li>
+            <li><a routerLink="UserForm" routerLinkActive="active">User Form</a></li>
+            <li><a routerLink="Products" routerLinkActive="active">Products</a></li>
+            <li><a routerLink="Jumbotron" routerLinkActive="active">Jumbotron</a></li>
+            <li><a routerLink="Stuff" routerLinkActive="active">Stuff</a></li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

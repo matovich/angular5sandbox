@@ -8,12 +8,7 @@ import { ProductService } from '../product.service';
 })
 
 export class AppComponent {
-  title = 'Angular 5 Sandbox';
-  imageUrl = 'https://www.w3schools.com/html/pic_mountain.jpg';
-  
+
   constructor() { }
 
-  onClickMe($event){
-    console.log("Clicked", $event);
-  }
 }

@@ -16,16 +16,24 @@ import { LoginService } from './login.service';
 import { ObservableSampleComponent } from './observable-sample/observable-sample.component';
 import { GitHubService } from './git-hub.service';
 import { GitHubComponent } from './git-hub/git-hub.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { routing } from './app.routing';
+import { BsJumbotronClientComponent } from './bs-jumbotron-client/bs-jumbotron-client.component';
+import { StuffComponent } from './stuff/stuff.component';
+import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
 
 @NgModule({
   declarations: [
     AppComponent, ProductsComponent, RatingComponent, ProductComponent, TruncatePipe, BsJumbotronComponent,
-    UserFormComponent, LoginComponent, ObservableSampleComponent, GitHubComponent
+    UserFormComponent, LoginComponent, ObservableSampleComponent, GitHubComponent, HomeComponent, 
+    NotFoundComponent, BsJumbotronClientComponent, StuffComponent, GitHubUserComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule, ReactiveFormsModule
+    BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, routing
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
