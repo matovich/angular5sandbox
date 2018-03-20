@@ -1,5 +1,5 @@
 <div class="my-border">
-  <form [formGroup]="form" (ngSubmit)="login()">
+  <form [formGroup]="form" (ngSubmit)="login() ">
     <div class="form-group">
       <label for="username">Username</label>
       <input id="username" type="text" class="form-control" formControlName="username">
@@ -23,5 +23,6 @@
       </div>
     </div>
     <button class="btn btn-primary" type="submit">Login</button>
+    <button class="btn btn-primary" ng-click="logout()">Logout</button>
   </form>
 </div>

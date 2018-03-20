@@ -28,5 +28,16 @@ export class LoginComponent implements OnInit {
       this.form.controls['password'].setErrors({ invalidLogin: true});
     }
 
+    this.resetAllControls();
   }
+
+  logout() {
+    this._loginService.logout();
+    this.resetAllControls();
+  }
+
+  private resetAllControls() {
+    this.form.controls['username'].reset();
+    this.form.controls['password'].reset();
+  };
 }

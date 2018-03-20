@@ -22,6 +22,8 @@ import { routing } from './app.routing';
 import { BsJumbotronClientComponent } from './bs-jumbotron-client/bs-jumbotron-client.component';
 import { StuffComponent } from './stuff/stuff.component';
 import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
+import { AuthGuardService } from './auth-guard.service';
+import { PreventUnsavedChangesGuardService } from './prevent-unsaved-changes-guard.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
   imports: [
     BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, routing
   ],
-  providers: [LoginService],
+  providers: [LoginService, AuthGuardService, PreventUnsavedChangesGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

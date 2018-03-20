@@ -11,16 +11,19 @@ import { ProductsComponent } from './products/products.component';
 import { BsJumbotronClientComponent } from './bs-jumbotron-client/bs-jumbotron-client.component';
 import { StuffComponent } from './stuff/stuff.component';
 import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
+import { AuthGuardService } from './auth-guard.service';
+import { PreventUnsavedChangesGuardService } from './prevent-unsaved-changes-guard.service';
+
 
 export const routing = RouterModule.forRoot([
-    { path: '', component: HomeComponent },
-    { path: 'GitHub', component: GitHubComponent },
-    { path: 'Login', component: LoginComponent },
+    { path: '', component: HomeComponent, canActivate:[AuthGuardService] },
+    { path: 'GitHub', component: GitHubComponent, canActivate: [AuthGuardService] },
+    { path: 'Login', component: LoginComponent, canDeactivate: [PreventUnsavedChangesGuardService] },
     { path: 'Observable', component: ObservableSampleComponent },
     { path: 'UserForm', component: UserFormComponent },
     { path: 'Products', component: ProductsComponent },
     { path: 'Jumbotron', component: BsJumbotronClientComponent },
     { path: 'Stuff', component: StuffComponent },
-    { path: 'GitHub/user/:login/:score', component: GitHubUserComponent },
+    { path: 'GitHub/user/:login/:score', component: GitHubUserComponent, canActivate: [AuthGuardService] },
     { path: '**', component: NotFoundComponent }
 ]);
