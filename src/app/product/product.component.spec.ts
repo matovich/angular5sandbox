@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductComponent } from './product.component';
+import { RatingComponent } from '../rating/rating.component';
+import { TruncatePipe } from '../truncate.pipe';
 
 describe('ProductComponent', () => {
   let component: ProductComponent;
@@ -8,7 +10,7 @@ describe('ProductComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductComponent ]
+      declarations: [ ProductComponent, RatingComponent, TruncatePipe ]
     })
     .compileComponents();
   }));

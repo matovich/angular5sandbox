@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BsJumbotronClientComponent } from './bs-jumbotron-client.component';
+import { BsJumbotronComponent } from '../bs-jumbotron/bs-jumbotron.component';
 
 describe('BsJumbotronClientComponent', () => {
   let component: BsJumbotronClientComponent;
@@ -8,7 +9,7 @@ describe('BsJumbotronClientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BsJumbotronClientComponent ]
+      declarations: [ BsJumbotronClientComponent, BsJumbotronComponent ]
     })
     .compileComponents();
   }));
@@ -19,7 +20,7 @@ describe('BsJumbotronClientComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create JumboTron client', () => {
     expect(component).toBeTruthy();
   });
 });

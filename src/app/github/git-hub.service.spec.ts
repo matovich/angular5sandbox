@@ -1,5 +1,5 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+//import { HttpTesting } from '@angular/http/testing';
 import { GitHubService } from './git-hub.service';
 
 describe('GithubService', () => {
